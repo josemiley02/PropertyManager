@@ -1,0 +1,144 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/miguel/Escritorio/Trabajo/PropertyManager/backend/src/PropertyManagement.Application/PropertyManagement.Application.csproj": {}
+  },
+  "projects": {
+    "/home/miguel/Escritorio/Trabajo/PropertyManager/backend/src/PropertyManagement.Application/PropertyManagement.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/miguel/Escritorio/Trabajo/PropertyManager/backend/src/PropertyManagement.Application/PropertyManagement.Application.csproj",
+        "projectName": "PropertyManagement.Application",
+        "projectPath": "/home/miguel/Escritorio/Trabajo/PropertyManager/backend/src/PropertyManagement.Application/PropertyManagement.Application.csproj",
+        "packagesPath": "/home/miguel/.nuget/packages/",
+        "outputPath": "/home/miguel/Escritorio/Trabajo/PropertyManager/backend/src/PropertyManagement.Application/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/miguel/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "/home/miguel/Escritorio/Trabajo/PropertyManager/backend/src/PropertyManagement.Domain/PropertyManagement.Domain.csproj": {
+                "projectPath": "/home/miguel/Escritorio/Trabajo/PropertyManager/backend/src/PropertyManagement.Domain/PropertyManagement.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[15.0.1, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[13.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.305/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/miguel/Escritorio/Trabajo/PropertyManager/backend/src/PropertyManagement.Domain/PropertyManagement.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/miguel/Escritorio/Trabajo/PropertyManager/backend/src/PropertyManagement.Domain/PropertyManagement.Domain.csproj",
+        "projectName": "PropertyManagement.Domain",
+        "projectPath": "/home/miguel/Escritorio/Trabajo/PropertyManager/backend/src/PropertyManagement.Domain/PropertyManagement.Domain.csproj",
+        "packagesPath": "/home/miguel/.nuget/packages/",
+        "outputPath": "/home/miguel/Escritorio/Trabajo/PropertyManager/backend/src/PropertyManagement.Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/miguel/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.305/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
