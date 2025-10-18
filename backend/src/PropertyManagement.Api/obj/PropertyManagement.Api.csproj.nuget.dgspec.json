@@ -176,14 +176,14 @@
         }
       }
     },
-    "/home/miguel/Escritorio/Trabajo/PropertyManager/backend/src/PropertyManagement.Domain/PropertyManagement.Domain.csproj": {
+    "/home/miguel/Escritorio/Trabajo/PropertyManager/backend/src/PropertyManagement.Common.Dto/PropertyManagement.Common.Dto.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/miguel/Escritorio/Trabajo/PropertyManager/backend/src/PropertyManagement.Domain/PropertyManagement.Domain.csproj",
-        "projectName": "PropertyManagement.Domain",
-        "projectPath": "/home/miguel/Escritorio/Trabajo/PropertyManager/backend/src/PropertyManagement.Domain/PropertyManagement.Domain.csproj",
+        "projectUniqueName": "/home/miguel/Escritorio/Trabajo/PropertyManager/backend/src/PropertyManagement.Common.Dto/PropertyManagement.Common.Dto.csproj",
+        "projectName": "PropertyManagement.Common.Dto",
+        "projectPath": "/home/miguel/Escritorio/Trabajo/PropertyManager/backend/src/PropertyManagement.Common.Dto/PropertyManagement.Common.Dto.csproj",
         "packagesPath": "/home/miguel/.nuget/packages/",
-        "outputPath": "/home/miguel/Escritorio/Trabajo/PropertyManager/backend/src/PropertyManagement.Domain/obj/",
+        "outputPath": "/home/miguel/Escritorio/Trabajo/PropertyManager/backend/src/PropertyManagement.Common.Dto/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/miguel/.nuget/NuGet/NuGet.Config"
@@ -235,6 +235,71 @@
         }
       }
     },
+    "/home/miguel/Escritorio/Trabajo/PropertyManager/backend/src/PropertyManagement.Domain/PropertyManagement.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/miguel/Escritorio/Trabajo/PropertyManager/backend/src/PropertyManagement.Domain/PropertyManagement.Domain.csproj",
+        "projectName": "PropertyManagement.Domain",
+        "projectPath": "/home/miguel/Escritorio/Trabajo/PropertyManager/backend/src/PropertyManagement.Domain/PropertyManagement.Domain.csproj",
+        "packagesPath": "/home/miguel/.nuget/packages/",
+        "outputPath": "/home/miguel/Escritorio/Trabajo/PropertyManager/backend/src/PropertyManagement.Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/miguel/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.10, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.305/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "/home/miguel/Escritorio/Trabajo/PropertyManager/backend/src/PropertyManagement.Infrastructure/PropertyManagement.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -257,6 +322,9 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
+              "/home/miguel/Escritorio/Trabajo/PropertyManager/backend/src/PropertyManagement.Common.Dto/PropertyManagement.Common.Dto.csproj": {
+                "projectPath": "/home/miguel/Escritorio/Trabajo/PropertyManager/backend/src/PropertyManagement.Common.Dto/PropertyManagement.Common.Dto.csproj"
+              },
               "/home/miguel/Escritorio/Trabajo/PropertyManager/backend/src/PropertyManagement.Domain/PropertyManagement.Domain.csproj": {
                 "projectPath": "/home/miguel/Escritorio/Trabajo/PropertyManager/backend/src/PropertyManagement.Domain/PropertyManagement.Domain.csproj"
               }
@@ -279,6 +347,14 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "FastEndpoints": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            },
+            "Linq.Dynamic": {
+              "target": "Package",
+              "version": "[1.0.4, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[9.0.10, )"
