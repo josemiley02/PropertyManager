@@ -3,7 +3,7 @@ using PropertyManagement.Domain.Enums;
 
 namespace PropertyManagement.Domain.Entities.Identity;
 
-public class Entity<T> where T : struct
+public class Entity<T> : Entity where T : struct
 {
     public T Id { get; set; }
 }

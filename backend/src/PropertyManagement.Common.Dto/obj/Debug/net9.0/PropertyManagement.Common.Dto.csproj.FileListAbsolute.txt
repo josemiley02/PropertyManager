@@ -1,0 +1,12 @@
+/home/miguel/Escritorio/Trabajo/PropertyManager/backend/src/PropertyManagement.Common.Dto/bin/Debug/net9.0/PropertyManagement.Common.Dto.deps.json
+/home/miguel/Escritorio/Trabajo/PropertyManager/backend/src/PropertyManagement.Common.Dto/bin/Debug/net9.0/PropertyManagement.Common.Dto.dll
+/home/miguel/Escritorio/Trabajo/PropertyManager/backend/src/PropertyManagement.Common.Dto/bin/Debug/net9.0/PropertyManagement.Common.Dto.pdb
+/home/miguel/Escritorio/Trabajo/PropertyManager/backend/src/PropertyManagement.Common.Dto/obj/Debug/net9.0/PropertyManagement.Common.Dto.GeneratedMSBuildEditorConfig.editorconfig
+/home/miguel/Escritorio/Trabajo/PropertyManager/backend/src/PropertyManagement.Common.Dto/obj/Debug/net9.0/PropertyManagement.Common.Dto.AssemblyInfoInputs.cache
+/home/miguel/Escritorio/Trabajo/PropertyManager/backend/src/PropertyManagement.Common.Dto/obj/Debug/net9.0/PropertyManagement.Common.Dto.AssemblyInfo.cs
+/home/miguel/Escritorio/Trabajo/PropertyManager/backend/src/PropertyManagement.Common.Dto/obj/Debug/net9.0/PropertyManagement.Common.Dto.csproj.CoreCompileInputs.cache
+/home/miguel/Escritorio/Trabajo/PropertyManager/backend/src/PropertyManagement.Common.Dto/obj/Debug/net9.0/PropertyManagement.Common.Dto.sourcelink.json
+/home/miguel/Escritorio/Trabajo/PropertyManager/backend/src/PropertyManagement.Common.Dto/obj/Debug/net9.0/PropertyManagement.Common.Dto.dll
+/home/miguel/Escritorio/Trabajo/PropertyManager/backend/src/PropertyManagement.Common.Dto/obj/Debug/net9.0/refint/PropertyManagement.Common.Dto.dll
+/home/miguel/Escritorio/Trabajo/PropertyManager/backend/src/PropertyManagement.Common.Dto/obj/Debug/net9.0/PropertyManagement.Common.Dto.pdb
+/home/miguel/Escritorio/Trabajo/PropertyManager/backend/src/PropertyManagement.Common.Dto/obj/Debug/net9.0/ref/PropertyManagement.Common.Dto.dll

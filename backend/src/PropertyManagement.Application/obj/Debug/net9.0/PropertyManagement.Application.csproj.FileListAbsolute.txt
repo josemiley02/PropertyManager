@@ -1,0 +1,16 @@
+/home/miguel/Escritorio/Trabajo/PropertyManager/backend/src/PropertyManagement.Application/bin/Debug/net9.0/PropertyManagement.Application.deps.json
+/home/miguel/Escritorio/Trabajo/PropertyManager/backend/src/PropertyManagement.Application/bin/Debug/net9.0/PropertyManagement.Application.dll
+/home/miguel/Escritorio/Trabajo/PropertyManager/backend/src/PropertyManagement.Application/bin/Debug/net9.0/PropertyManagement.Application.pdb
+/home/miguel/Escritorio/Trabajo/PropertyManager/backend/src/PropertyManagement.Application/bin/Debug/net9.0/PropertyManagement.Domain.dll
+/home/miguel/Escritorio/Trabajo/PropertyManager/backend/src/PropertyManagement.Application/bin/Debug/net9.0/PropertyManagement.Domain.pdb
+/home/miguel/Escritorio/Trabajo/PropertyManager/backend/src/PropertyManagement.Application/obj/Debug/net9.0/PropertyManagement.Application.csproj.AssemblyReference.cache
+/home/miguel/Escritorio/Trabajo/PropertyManager/backend/src/PropertyManagement.Application/obj/Debug/net9.0/PropertyManagement.Application.GeneratedMSBuildEditorConfig.editorconfig
+/home/miguel/Escritorio/Trabajo/PropertyManager/backend/src/PropertyManagement.Application/obj/Debug/net9.0/PropertyManagement.Application.AssemblyInfoInputs.cache
+/home/miguel/Escritorio/Trabajo/PropertyManager/backend/src/PropertyManagement.Application/obj/Debug/net9.0/PropertyManagement.Application.AssemblyInfo.cs
+/home/miguel/Escritorio/Trabajo/PropertyManager/backend/src/PropertyManagement.Application/obj/Debug/net9.0/PropertyManagement.Application.csproj.CoreCompileInputs.cache
+/home/miguel/Escritorio/Trabajo/PropertyManager/backend/src/PropertyManagement.Application/obj/Debug/net9.0/PropertyManagement.Application.sourcelink.json
+/home/miguel/Escritorio/Trabajo/PropertyManager/backend/src/PropertyManagement.Application/obj/Debug/net9.0/Property.6C6C3B46.Up2Date
+/home/miguel/Escritorio/Trabajo/PropertyManager/backend/src/PropertyManagement.Application/obj/Debug/net9.0/PropertyManagement.Application.dll
+/home/miguel/Escritorio/Trabajo/PropertyManager/backend/src/PropertyManagement.Application/obj/Debug/net9.0/refint/PropertyManagement.Application.dll
+/home/miguel/Escritorio/Trabajo/PropertyManager/backend/src/PropertyManagement.Application/obj/Debug/net9.0/PropertyManagement.Application.pdb
+/home/miguel/Escritorio/Trabajo/PropertyManager/backend/src/PropertyManagement.Application/obj/Debug/net9.0/ref/PropertyManagement.Application.dll

@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "kH9gi7tvmFE=",
+  "dgSpecHash": "iRqYVK+MwJc=",
   "success": true,
   "projectFilePath": "/home/miguel/Escritorio/Trabajo/PropertyManager/backend/tests/PropertyManagement.Tests/PropertyManagement.Tests.csproj",
   "expectedPackageFiles": [
-    "/home/miguel/.nuget/packages/automapper/15.0.1/automapper.15.0.1.nupkg.sha512",
+    "/home/miguel/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
     "/home/miguel/.nuget/packages/azure.core/1.38.0/azure.core.1.38.0.nupkg.sha512",
     "/home/miguel/.nuget/packages/azure.identity/1.11.4/azure.identity.1.11.4.nupkg.sha512",
     "/home/miguel/.nuget/packages/castle.core/5.1.1/castle.core.5.1.1.nupkg.sha512",
@@ -22,6 +22,7 @@
     "/home/miguel/.nuget/packages/microsoft.aspnetcore.identity.entityframeworkcore/9.0.10/microsoft.aspnetcore.identity.entityframeworkcore.9.0.10.nupkg.sha512",
     "/home/miguel/.nuget/packages/microsoft.bcl.asyncinterfaces/1.1.1/microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "/home/miguel/.nuget/packages/microsoft.codecoverage/17.12.0/microsoft.codecoverage.17.12.0.nupkg.sha512",
+    "/home/miguel/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
     "/home/miguel/.nuget/packages/microsoft.data.sqlclient/5.1.6/microsoft.data.sqlclient.5.1.6.nupkg.sha512",
     "/home/miguel/.nuget/packages/microsoft.data.sqlclient.sni.runtime/5.1.1/microsoft.data.sqlclient.sni.runtime.5.1.1.nupkg.sha512",
     "/home/miguel/.nuget/packages/microsoft.entityframeworkcore/9.0.10/microsoft.entityframeworkcore.9.0.10.nupkg.sha512",
