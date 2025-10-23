@@ -10,17 +10,16 @@ namespace PropertyManagement.Infrastructure.Factories
         {
             var optionsBuilder = new DbContextOptionsBuilder<ApplicationDbContext>();
 
-            optionsBuilder.UseSqlServer("Server=localhost,1433;Database=PropertyManagementDb;User Id=property_user;Password=StrongPass123!;Encrypt=True;TrustServerCertificate=True;");
+            optionsBuilder.UseSqlServer("Server=localhost,1433;Database=PropertyManagementDb;User Id=property_user;Password=Josemiley_02;Encrypt=True;TrustServerCertificate=True;");
 
             var loggerFactory = LoggerFactory.Create(builder => builder.AddConsole());
-            var dateTimeService = new DateTimeServiceMock();
+            var dateTimeService = new DateTimeService();
 
             return new ApplicationDbContext(optionsBuilder.Options, dateTimeService, loggerFactory);
         }
-
-        private class DateTimeServiceMock : IDateTimeService
-        {
-            public DateTime NowUtc { get => DateTime.UtcNow; set => value = DateTime.UtcNow; }
-        }
+    }
+    public class DateTimeService : IDateTimeService
+    {
+        public DateTime NowUtc { get => DateTime.UtcNow; set => value = DateTime.UtcNow; }
     }
 }

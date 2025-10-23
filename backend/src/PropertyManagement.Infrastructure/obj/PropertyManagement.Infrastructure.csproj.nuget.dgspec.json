@@ -177,7 +177,7 @@
           "dependencies": {
             "FastEndpoints": {
               "target": "Package",
-              "version": "[7.0.1, )"
+              "version": "[5.30.0, )"
             },
             "Linq.Dynamic": {
               "target": "Package",
