@@ -40,4 +40,8 @@
     <ProjectReference Include="..\PropertyManagement.Infrastructure\PropertyManagement.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Endpoints/v1/AppUser/" />
+  </ItemGroup>
+
 </Project>

@@ -27,7 +27,9 @@ public class GetHostByIdHandler : CoreQueryHandler<GetHostByIdCommand, GetHostBy
         return new GetHostByIdResponse
         {
             Id = host.Id,
-            Name = host.FullName
+            Name = host.FullName,
+            Email = host.Email,
+            Phone = host.Phone
         };
     }
 }

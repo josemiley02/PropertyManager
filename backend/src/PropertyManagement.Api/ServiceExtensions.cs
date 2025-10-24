@@ -36,27 +36,48 @@ public static class ServiceExtensions
     }
 public static void AddJWTAuthenticationExtension(this IServiceCollection services, IConfiguration configuration)
 {
-    var keyValue = configuration["Jwt:Key"];
-    if (string.IsNullOrWhiteSpace(keyValue))
-        throw new InvalidOperationException("❌ JWT Key not found in configuration. Check appsettings.json -> Jwt:Key");
+    // Leer la clave de seguridad desde TokenOptions:SecurityKey
+    var securityKey = configuration["TokenOptions:SecurityKey"];
+    if (string.IsNullOrWhiteSpace(securityKey))
+        throw new InvalidOperationException("❌ SecurityKey not found in configuration. Check appsettings.json -> TokenOptions:SecurityKey");
 
-    var key = Encoding.UTF8.GetBytes(keyValue);
+    var key = Encoding.UTF8.GetBytes(securityKey);
 
-    services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-        .AddJwtBearer(options =>
+    services.AddAuthentication(options =>
+    {
+        options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+        options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+    })
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
         {
-            options.TokenValidationParameters = new TokenValidationParameters
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = configuration["TokenOptions:Issuer"],
+            ValidAudience = configuration["TokenOptions:Audience"],
+            IssuerSigningKey = new SymmetricSecurityKey(key)
+        };
+
+        // (Opcional) Log de errores o mensajes de token
+        options.Events = new JwtBearerEvents
+        {
+            OnAuthenticationFailed = context =>
             {
-                ValidateIssuer = true,
-                ValidateAudience = true,
-                ValidateLifetime = true,
-                ValidateIssuerSigningKey = true,
-                ValidIssuer = configuration["Jwt:Issuer"],
-                ValidAudience = configuration["Jwt:Audience"],
-                IssuerSigningKey = new SymmetricSecurityKey(key)
-            };
-        });
+                Console.WriteLine($"❌ Token inválido: {context.Exception}");
+                return Task.CompletedTask;
+            },
+            OnTokenValidated = context =>
+            {
+                Console.WriteLine($"✅ Token válido para usuario: {context.Principal?.Identity?.Name}");
+                return Task.CompletedTask;
+            }
+        };
+    });
 }
+
 
     public static void AddIdentityExtension(this IServiceCollection services)
     {

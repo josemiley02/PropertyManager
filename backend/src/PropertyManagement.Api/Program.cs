@@ -3,6 +3,7 @@ using Hangfire;
 using HangfireBasicAuthenticationFilter;
 using Microsoft.Extensions.Options;
 using PropertyManagement.Api;
+using PropertyManagement.Api.Seed;
 using PropertyManagement.Domain.Settings;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -43,6 +44,8 @@ builder.Services.AddHangfireServer();
 var app = builder.Build();
 app.UseCors();
 var hangFire = app.Services.GetService<IOptions<HangFireSettings>>()!.Value;
+await RoleSeeder.SeedRolesAsync(app.Services);
+await RoleSeeder.SeedAdminAsync(app.Services);
 
 app.UseHangfireDashboard("/hangfire", new DashboardOptions
 {

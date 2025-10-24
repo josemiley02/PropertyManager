@@ -9,5 +9,4 @@ public class RegisterModel : ICommand<Response<NoContentData>>
     public string? Username { get; set; }
     public required string Password { get; set; }
     public IEnumerable<string> Roles { get; set; } = new HashSet<string>();
-    public long CompanyId { get; set; }
 }
