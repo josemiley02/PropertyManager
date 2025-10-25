@@ -111,6 +111,9 @@ namespace PropertyManagement.Infrastructure.Migrations
                     b.Property<int>("StatusBaseEntity")
                         .HasColumnType("int");
 
+                    b.Property<double>("TotalPrice")
+                        .HasColumnType("float");
+
                     b.HasKey("Id");
 
                     b.HasIndex("PropertyId");

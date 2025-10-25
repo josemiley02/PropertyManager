@@ -10,7 +10,7 @@ namespace PropertyManagement.Infrastructure.Factories
         {
             var optionsBuilder = new DbContextOptionsBuilder<ApplicationDbContext>();
 
-            optionsBuilder.UseSqlServer("Server=localhost,1433;Database=PropertyManagementDb;User Id=property_user;Password=Josemiley_02;Encrypt=True;TrustServerCertificate=True;");
+            optionsBuilder.UseSqlServer("Server=localhost,1433;Database=PropertyManagementDb;User Id= SA;Password=Josemiley_02;Encrypt=True;TrustServerCertificate=True;");
 
             var loggerFactory = LoggerFactory.Create(builder => builder.AddConsole());
             var dateTimeService = new DateTimeService();

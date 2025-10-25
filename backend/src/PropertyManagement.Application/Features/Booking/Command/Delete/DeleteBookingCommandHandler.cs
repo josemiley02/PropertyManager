@@ -1,19 +1,23 @@
 using System;
 using System.Linq.Expressions;
 using Microsoft.Extensions.Logging;
+using PropertyManagement.Application.Abstractions;
 using PropertyManagement.Common.Dto;
+using PropertyManagement.Domain.Enums;
 using PropertyManagement.Infrastructure.Abstractions;
 
 namespace PropertyManagement.Application.Features.Booking.Command.Delete;
 
 public class DeleteBookingCommandHandler : CoreCommandHandler<DeleteBookingCommand, Response<NoContentData>>
 {
+    private readonly IDomainEventService _domainEvent;
     private readonly ILogger<DeleteBookingCommandHandler> _logger;
     private readonly IUnitOfWork _unitOfWork;
-    public DeleteBookingCommandHandler(ILogger<DeleteBookingCommandHandler> logger, IUnitOfWork unitOfWork) : base(unitOfWork)
+    public DeleteBookingCommandHandler(ILogger<DeleteBookingCommandHandler> logger, IUnitOfWork unitOfWork, IDomainEventService domainEvent) : base(unitOfWork)
     {
         _logger = logger;
         _unitOfWork = unitOfWork;
+        _domainEvent = domainEvent;
     }
     public override async Task<Response<NoContentData>> ExecuteAsync(DeleteBookingCommand command, CancellationToken ct = default)
     {
@@ -37,6 +41,11 @@ public class DeleteBookingCommandHandler : CoreCommandHandler<DeleteBookingComma
             ThrowError($"Booking with id {command.BookingId} not found", 404);
         }
         await bookingRepository.DeleteAsync(booking);
+        await _domainEvent.AddEventAsync(
+            EventType.BookingCancelled,
+            property.Id,
+            $"A booking was deleted today: {DateTime.UtcNow}"
+        );
         _logger.LogInformation($"{nameof(ExecuteAsync)} | Execution completed");
         await _unitOfWork.SaveChangesAsync();
         return Response<NoContentData>.SuccessWithOutData("OK");

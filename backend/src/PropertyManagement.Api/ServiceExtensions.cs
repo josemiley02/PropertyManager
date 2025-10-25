@@ -29,6 +29,7 @@ public static class ServiceExtensions
         services.AddScoped<IUnitOfWork, UnitOfWork>();
         services.AddScoped<ICheckUniqueService, CheckUniqueService>();
         services.AddScoped<ITokenHandler, JwtHandler>();
+        services.AddScoped<IDomainEventService, DomainEventService>();
     }
     public static void AddGenericRepositoryExtension(this IServiceCollection services)
     {

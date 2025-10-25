@@ -1,17 +1,20 @@
 using System;
 using Microsoft.Extensions.Logging;
+using PropertyManagement.Application.Abstractions;
 using PropertyManagement.Infrastructure.Abstractions;
 
 namespace PropertyManagement.Application.Features.Property.Command.Post;
 
 public class CreatePropertyCommandHandler : CoreCommandHandler<CreatePropertyCommand, CreatePropertyResponse>
 {
+    private readonly IDomainEventService _domainEvent;
     private readonly ILogger<CreatePropertyCommandHandler> _logger;
     private readonly IUnitOfWork _unitOfWork;
-    public CreatePropertyCommandHandler(ILogger<CreatePropertyCommandHandler> logger, IUnitOfWork unitOfWork) : base(unitOfWork)
+    public CreatePropertyCommandHandler(ILogger<CreatePropertyCommandHandler> logger, IUnitOfWork unitOfWork, IDomainEventService domainEvent) : base(unitOfWork)
     {
         _logger = logger;
         _unitOfWork = unitOfWork;
+        _domainEvent = domainEvent;
     }
     public override async Task<CreatePropertyResponse> ExecuteAsync(CreatePropertyCommand command, CancellationToken ct = default)
     {
@@ -33,6 +36,10 @@ public class CreatePropertyCommandHandler : CoreCommandHandler<CreatePropertyCom
             Host = host
         };
         await propertyRepository.SaveAsync(property);
+        await _domainEvent.AddEventAsync(
+            Domain.Enums.EventType.PropertyCreated,
+            property.Id,
+            $"The Property {property.Name} was created");
         _logger.LogInformation($"{nameof(ExecuteAsync)} | Execution completed");
         await _unitOfWork.SaveChangesAsync();
         return new CreatePropertyResponse
